@@ -1,25 +1,21 @@
 /** @format */
 
-// src/components/Sidebar.jsx
+// src/components/WorkHoursSidebar.jsx
 import React from "react";
 
-const Sidebar = ({ activeSection, setActiveSection }) => {
+const WorkHoursSidebar = ({ activeSection, setActiveSection }) => {
   const menuItems = [
-    { id: "dashboard", label: "Dashboard", icon: "📊" },
-    { id: "income-tracker", label: "Income Tracker", icon: "💰" },
-    { id: "expense-tracker", label: "Expense Tracker", icon: "🛒" },
-    { id: "team-payments", label: "Team Payments", icon: "👥" },
-    { id: "yearly-summary", label: "Analytics", icon: "📈" },
-    // { id: "work-hours", label: "Work Hours", icon: "⏰" }, // Add this line
+    { id: "tracker", label: "Time Tracker", icon: "⏱️" },
+    { id: "analytics", label: "Analytics", icon: "📊" },
   ];
 
   return (
     <aside className="w-full md:w-64 bg-white shadow-sm border-r md:min-h-screen">
       <div className="p-4 border-b">
-        <h2 className="text-lg font-semibold text-gray-900">
-          Finance Management
-        </h2>
-        <p className="text-sm text-gray-600">Complete financial tracking</p>
+        <h2 className="text-lg font-semibold text-gray-900">Work Hours</h2>
+        <p className="text-sm text-gray-600">
+          Track and analyze your work time
+        </p>
       </div>
       <nav className="mt-4">
         {menuItems.map((item) => (
@@ -41,4 +37,4 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
   );
 };
 
-export default Sidebar;
+export default WorkHoursSidebar;

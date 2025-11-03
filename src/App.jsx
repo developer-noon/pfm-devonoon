@@ -12,6 +12,7 @@ import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import FinanceDashboard from "./components/FinanceDashboard";
+import WorkHoursDashboard from "./components/WorkHoursDashboard";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 
@@ -30,17 +31,7 @@ function AppContent() {
       case "finance":
         return <FinanceDashboard />;
       case "work-hours":
-        return (
-          <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">⏰</div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Work Hours Management
-              </h2>
-              <p className="text-gray-600">Coming Soon - Under Development</p>
-            </div>
-          </div>
-        );
+        return <WorkHoursDashboard />;
       case "home":
       default:
         return <HeroSection />;
@@ -48,7 +39,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#f5f5f5]">
       <Header
         currentView={currentView}
         setCurrentView={setCurrentView}
@@ -83,4 +74,3 @@ function App() {
 }
 
 export default App;
-

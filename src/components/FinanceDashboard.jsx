@@ -8,6 +8,8 @@ import IncomeTracker from "./IncomeTracker";
 import ExpenseTracker from "./ExpenseTracker";
 import TeamPayments from "./TeamPayments";
 import YearlySummary from "./YearlySummary";
+// Add this import at the top
+import WorkHoursTracker from "./WorkHoursTracker";
 
 const FinanceDashboard = () => {
   const [activeSection, setActiveSection] = useState("dashboard");
@@ -39,6 +41,13 @@ const FinanceDashboard = () => {
       case "dashboard":
       default:
         return <DashboardOverview data={financeData} />;
+      // case "work-hours":
+      //   return (
+      //     <WorkHoursTracker
+      //       data={financeData}
+      //       setFinanceData={setFinanceData}
+      //     />
+      //   );
     }
   };
 
