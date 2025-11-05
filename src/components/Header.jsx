@@ -264,6 +264,16 @@ const Header = ({ currentView, setCurrentView, isLoggedIn, setIsLoggedIn }) => {
               >
                 Work Hours Manage
               </button>
+              <button
+                onClick={() => handleNavigation("commission")}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  currentView === "commission"
+                    ? "bg-blue-100 text-blue-700"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
+              >
+                Commission Collector
+              </button>
             </nav>
           )}
 
@@ -417,6 +427,17 @@ const Header = ({ currentView, setCurrentView, isLoggedIn, setIsLoggedIn }) => {
                   }`}
                 >
                   Work Hours Manage
+                </button>
+
+                <button
+                  onClick={() => handleNavigation("commission")}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    currentView === "commission"
+                      ? "bg-blue-100 text-blue-700"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                >
+                  Commission Collector
                 </button>
 
                 {/* User info and logout */}

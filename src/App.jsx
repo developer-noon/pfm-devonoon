@@ -15,6 +15,7 @@ import FinanceDashboard from "./components/FinanceDashboard";
 import WorkHoursDashboard from "./components/WorkHoursDashboard";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import CommissionDashboard from "./components/CommissionDashboard";
 
 // Protected Route Component
 function ProtectedRoute({ children }) {
@@ -28,6 +29,9 @@ function AppContent() {
 
   const renderCurrentView = () => {
     switch (currentView) {
+      // In the renderCurrentView function, add:
+      case "commission":
+        return <CommissionDashboard />;
       case "finance":
         return <FinanceDashboard />;
       case "work-hours":
